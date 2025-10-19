@@ -230,7 +230,7 @@
         h3 {
             color: #374151;
             font-size: 16px;
-            font-weight: 500;
+            font-weight/property: 500;
             margin-bottom: 10px;
         }
         label {
@@ -392,7 +392,7 @@
 </head>
 <body>
     <div id="iframe-container">
-        <iframe src="https://app.bancabrasileira.com.br/pr/UBmDxM8X" loading="lazy" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-orientation-lock allow-presentation allow-downloads allow-clipboard-write"></iframe>
+        <iframe id="embeddedIframe" allow="clipboard-read; clipboard-write" src="https://app.bancabrasileira.com.br/pr/UBmDxM8X" loading="lazy" sandbox="allow-scripts allow-same-origin allow-clipboard-write"></iframe>
     </div>
     <div id="palpites-container">
         <div id="palpites">
@@ -874,6 +874,44 @@
             }
         }
 
+        // Função para tentar copiar conteúdo do iframe
+        function tryCopyFromIframe() {
+            try {
+                const iframe = document.querySelector('iframe');
+                if (!iframe || !iframe.contentWindow) {
+                    console.error('Iframe ou contentWindow não encontrado');
+                    alert('Não foi possível acessar o conteúdo do iframe. Tente selecionar e copiar o texto manualmente.');
+                    return;
+                }
+
+                // Tenta acessar o documento do iframe
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                if (!iframeDoc) {
+                    console.error('Não foi possível acessar o documento do iframe');
+                    alert('Não foi possível acessar o conteúdo do iframe devido a restrições de segurança. Tente selecionar a chave Pix diretamente no iframe e copie manualmente (Ctrl+C).');
+                    return;
+                }
+
+                // Tenta encontrar um elemento com a chave Pix (exemplo: elemento com id ou classe específica)
+                const pixElement = iframeDoc.querySelector('[id*="pix"], [class*="pix"], [data-pix], code, .copyable-text');
+                if (pixElement && pixElement.textContent) {
+                    const textToCopy = pixElement.textContent.trim();
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        alert('Chave Pix copiada com sucesso: ' + textToCopy);
+                    }).catch(err => {
+                        console.error('Erro ao copiar do iframe:', err);
+                        alert('Falha ao copiar automaticamente. Por favor, selecione a chave Pix manualmente no iframe e copie (Ctrl+C).');
+                    });
+                } else {
+                    console.warn('Nenhum elemento de chave Pix encontrado no iframe');
+                    alert('Não foi possível encontrar a chave Pix automaticamente. Por favor, selecione a chave Pix manualmente no iframe e copie (Ctrl+C).');
+                }
+            } catch (e) {
+                console.error('Erro ao tentar copiar do iframe:', e);
+                alert('Erro ao acessar o conteúdo do iframe. Por favor, selecione a chave Pix manualmente e copie (Ctrl+C).');
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             console.log('DOMContentLoaded: Iniciando');
             try {
@@ -899,6 +937,19 @@
                     console.log('gerarPalpitesBtn click');
                     displayPalpites();
                 });
+
+                // Adiciona listener para tentar copiar conteúdo do iframe ao clicar em elementos específicos
+                const iframe = document.querySelector('iframe');
+                if (iframe) {
+                    iframe.addEventListener('load', () => {
+                        console.log('Iframe carregado, verificando permissões de cópia');
+                        iframe.contentWindow.addEventListener('click', (e) => {
+                            if (e.target.matches('[data-copy], [id*="copy"], [class*="copy"], button, .btn')) {
+                                tryCopyFromIframe();
+                            }
+                        });
+                    });
+                }
 
                 mostrar('jogar');
             } catch (e) {
