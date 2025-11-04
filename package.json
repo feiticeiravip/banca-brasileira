@@ -1,0 +1,8 @@
+{
+  "name": "banca-palpite-bot",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "node scripts/generate_palpite.js"
+  },
+  "license": "MIT"
+}
