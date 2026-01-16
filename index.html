@@ -1,584 +1,170 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V0N3WWWQ7V"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-V0N3WWWQ7V');
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; frame-src *; connect-src *;">
-    <title>Banca Brasileira - Cadastros novos ganham 30% de bônus</title>
-    <meta name="description" content="Banca Brasileira Bet Oficial - Cadastros novos ganham 30% de Bônus. A melhor banca brasileira para apostas online, jogo do bicho e cassino com bônus de até 30% no primeiro depósito." />
-    <meta name="keywords" content="banca brasileira, banca brasileira bet, banca brasileira apostas, jogo do bicho, cassino online, apostas esportivas, bônus cadastro, banca brasileira oficial" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Banca Brasileira Bet - Cadastros novos ganham 30% de bônus" />
-    <meta property="og:description" content="Banca Brasileira Bet Oficial - Cadastros novos ganham 30% de Bônus. A melhor banca brasileira para apostas online, jogo do bicho e cassino." />
-    <meta property="og:url" content="https://bancabrasileirabet.com.br/" />
-    <meta property="og:type" content="website" />
-    <link rel="canonical" href="https://bancabrasileirabet.com.br/" />
-    <link rel="icon" href="bancabrasileira.png" type="image/webp" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+
+    <title>Banca Brasileira</title>
+
+    <meta name="description" content="Banca Brasileira é uma plataforma completa de apostas e cassino online. Acesse o app oficial com segurança, rapidez e suporte via WhatsApp.">
+    <meta name="keywords" content="banca brasileira, banca brasileira bet, cassino online, apostas online, jogos online">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/webp" href="icon.webp">
+
     <style>
-        *, *::before, *::after {
-            box-sizing: border-box;
+        body {
             margin: 0;
-            padding: 0;
+            background: #0b0b0b;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        body, html {
-            font-family: 'Roboto', sans-serif;
-            background: #f4f6f8;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            color: #1a1a1a;
-            overflow-x: hidden;
-        }
-        header {
-            background: linear-gradient(135deg, #ffffff, #f9fafb);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8px 16px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            height: 40px;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        header h1 {
-            font-size: 16px;
-            font-weight: 700;
-            color: #1a1a1a;
-            letter-spacing: 0.5px;
-        }
-        #main-content {
-            flex: 1;
-            overflow-y: auto;
-            padding-bottom: 60px;
-        }
-        #jogar {
-            width: 100%;
-        }
-        #palpites-container {
-            padding: 16px;
-            max-width: 600px;
-            margin: 0 auto;
-            display: none;
-        }
-        #palpites {
-            padding: 16px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-            width: 100%;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-        #palpites.visible {
-            opacity: 1;
-        }
+
         iframe {
             width: 100%;
-            height: calc(100vh - 100px);
+            height: calc(100vh - 70px);
             border: none;
-            display: block;
         }
+
         footer {
-            background: #ffffff;
+            height: 70px;
+            background: #0f0f0f;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px;
-            border-top: 1px solid #e0e0e0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            height: 50px;
-            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-            z-index: 10;
-            gap: 4px;
-        }
-        footer button {
-            background: none;
-            border: none;
-            font-size: 12px;
-            font-weight: 500;
-            color: #444;
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 6px;
-            transition: color 0.2s, background 0.2s, transform 0.1s;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            min-width: 50px;
-            min-height: 44px;
-            flex: 1;
             justify-content: center;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
+            align-items: center;
+            gap: 12px;
+            padding: 0 10px;
         }
-        footer button:hover, footer button:active {
-            color: #222;
-            background: #f1f3f5;
-        }
-        footer button:active {
-            transform: scale(0.95);
-        }
-        select, button:not(footer button) {
-            padding: 12px;
+
+        .footer-btn {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
             border-radius: 8px;
-            border: 1px solid #d1d5db;
-            background: #f9fafb;
-            font-size: 14px;
-            width: 100%;
-            margin: 8px 0;
-            transition: border-color 0.2s, box-shadow 0.2s, transform 0.1s;
-        }
-        select {
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23444' viewBox='0 0 16 16'%3E%3Cpath d='M8 11.5l-6-6L3.5 4l4.5 4.5L12.5 4 14 5.5l-6 6z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 12px center;
-        }
-        select:focus, button:focus {
-            border-color: #f59e0b;
-            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
-            outline: none;
-        }
-        button:not(footer button) {
-            background: #f59e0b;
+            padding: 8px 12px;
             color: #fff;
-            font-weight: 600;
-            cursor: pointer;
-            border: none;
-        }
-        button:not(footer button):hover {
-            background: #d97706;
-        }
-        button:not(footer button):active {
-            transform: scale(0.98);
-        }
-        button.green {
-            background: #10b981;
-        }
-        button.green:hover {
-            background: #059669;
-        }
-        button:disabled {
-            background: #d1d5db;
-            cursor: not-allowed;
-        }
-        label {
-            font-size: 14px;
-            font-weight: 500;
-            color: #374151;
-            margin-bottom: 6px;
-            display: block;
-        }
-        .section {
-            margin-bottom: 20px;
-            padding: 16px;
-            background: #f9fafb;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-        .palpite-result, .puxadas {
-            margin: 12px 0;
-            padding: 16px;
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-        }
-        .milhares {
-            margin-bottom: 8px;
-            font-size: 14px;
+            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-        h2 {
-            color: #f59e0b;
-            font-size: 20px;
+            font-size: 13px;
             font-weight: 600;
-            margin-bottom: 12px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
         }
-        h3 {
-            color: #374151;
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 10px;
+
+        .footer-btn:hover {
+            background: #00ff88;
+            color: #000;
         }
-        .hidden {
-            display: none;
+
+        .footer-btn img {
+            height: 28px;
         }
-        .error {
-            color: #ef4444;
-            font-size: 14px;
-            margin: 10px 0;
-            padding: 10px;
-            background: #fef2f2;
-            border-radius: 6px;
-        }
-        .loading {
-            font-size: 14px;
-            color: #374151;
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .loading::before {
-            content: '';
-            width: 16px;
-            height: 16px;
-            border: 2px solid #f59e0b;
-            border-top-color: transparent;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        #promotorOverlay {
-            display: none;
+
+        /* Popup */
+        .popup-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            z-index: 100;
-            align-items: center;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            display: none;
             justify-content: center;
-            flex-direction: column;
+            align-items: center;
+            z-index: 9999;
         }
-        #promotorOverlay img {
-            max-width: 90%;
-            max-height: 80vh;
+
+        .popup {
+            position: relative;
+            text-align: center;
+        }
+
+        .popup img {
+            max-width: 90vw;
+            max-height: 70vh;
             cursor: pointer;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        #promotorOverlay .close-btn {
+
+        .close-btn {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(0,0,0,0.6);
-            border: none;
+            top: -12px;
+            right: -12px;
+            background: red;
             color: white;
-            font-size: 30px;
-            width: 50px;
-            height: 50px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
+            font-size: 16px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 14px;
-            }
-            footer button {
-                font-size: 10px;
-            }
-            iframe {
-                height: calc(100vh - 90px);
-            }
-            #promotorOverlay .close-btn {
-                top: 10px;
-                right: 10px;
-                font-size: 24px;
-                width: 40px;
-                height: 40px;
-            }
+
+        .access-btn {
+            margin-top: 12px;
+            padding: 10px 22px;
+            font-size: 16px;
+            font-weight: bold;
+            background: #00ff88;
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .access-btn:hover {
+            background: #00cc6e;
         }
     </style>
 </head>
+
 <body>
-    <!-- Overlay do Promotor - aparece após 15 segundos -->
-    <div id="promotorOverlay">
-        <button class="close-btn" onclick="document.getElementById('promotorOverlay').style.display='none';">X</button>
-        <img src="promotor.png" alt="Seja um promotor da Banca Brasileira Bet" onclick="window.open('https://wa.me/5583993370071?text=Desejo%20me%20tornar%20promotor%21', '_blank')">
+
+<iframe
+    src="https://app.bancabrasileira.com.br/pr/UBmDxM8X"
+    allow="clipboard-read; clipboard-write; fullscreen; payment; geolocation; microphone; camera"
+    sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-downloads allow-top-navigation">
+</iframe>
+
+<footer>
+    <a class="footer-btn" href="https://wa.me/5583993370071?text=Suporte,%20preciso%20de%20ajuda%20na%20banca%20brasileira!" target="_blank">
+        📱 Suporte
+    </a>
+
+    <a class="footer-btn" href="https://app.bancabrasileira.com.br/pr/UBmDxM8X" target="_blank">
+        🎰 Cassino
+    </a>
+
+    <a class="footer-btn" href="https://tigerclub.com.br" target="_blank">
+        <img src="tiger.webp" alt="Tiger Club">
+        <span>Banca Parceira</span>
+    </a>
+</footer>
+
+<!-- Popup -->
+<div class="popup-overlay" id="popup">
+    <div class="popup">
+        <div class="close-btn" onclick="closePopup()">X</div>
+
+        <a href="https://app.sorteclub.com/pr/Wqz0l6Qw" target="_blank">
+            <img src="bancaparceira.webp" alt="Acessar App">
+        </a>
+
+        <br>
+
+        <a href="https://app.sorteclub.com/pr/Wqz0l6Qw" target="_blank">
+            <button class="access-btn">ACESSAR APP</button>
+        </a>
     </div>
+</div>
 
-    <header>
-        <h1>BANCA BRASILEIRA BET OFICIAL</h1>
-    </header>
+<script>
+    setTimeout(() => {
+        document.getElementById("popup").style.display = "flex";
+    }, 10000);
 
-    <div id="main-content">
-        <div id="jogar">
-            <iframe id="embeddedIframe" allow="clipboard-read; clipboard-write" src="https://app.bancabrasileira.com.br/pr/UBmDxM8X" loading="lazy" sandbox="allow-scripts allow-same-origin allow-clipboard-write"></iframe>
-        </div>
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
 
-        <div id="palpites-container">
-            <div id="palpites">
-                <div class="section">
-                    <h2>Gerar Palpites</h2>
-                    <label for="bancaSelect">Escolha a Banca:</label>
-                    <select id="bancaSelect">
-                        <option value="">Selecione uma banca</option>
-                        <option value="PT Rio">PT Rio</option>
-                        <option value="Look GO">Look GO</option>
-                        <option value="Nacional">Nacional</option>
-                        <option value="Maluca BA">Maluca BA</option>
-                        <option value="Lotep">Lotep</option>
-                    </select>
-                    <button id="gerarPalpites" disabled>Gerar Palpites</button>
-                    <div class="palpite-result" id="palpiteOutput"></div>
-                </div>
-
-                <div class="section">
-                    <h2>Consultar Puxadas</h2>
-                    <label for="animalSelect">Escolha um Animal:</label>
-                    <select id="animalSelect">
-                        <option value="">Selecione um animal</option>
-                    </select>
-                    <button id="verPuxada" class="hidden">Ver Puxadas</button>
-                    <div class="puxadas" id="puxadaResult"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <button onclick="window.open('https://wa.me/5583993370071?text=Suporte%2C+preciso+de+ajuda', '_blank')">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M13.6 2.4A8 8 0 0 0 0 8c0 1.8.6 3.5 1.7 4.9L1 15l2.1-.7A8 8 0 0 0 8 16c4.4 0 8-3.6 8-8a8 8 0 0 0-2.4-5.6zM8 14.5a6.5 6.5 0 0 1-3.7-1.1l-.3-.1-.7.2-1.2.4.4-1.2.2-.7-.1-.3A6.5 6.5 0 0 1 8 1.5a6.5 6.5 0 0 1 6.5 6.5A6.5 6.5 0 0 1 8 14.5zm2.3-4.7c-.1 0-.2 0-.3-.1-.2-.1-1-.5-1.2-.6-.2-.1-.4-.2-.5-.3-.2-.1-.3-.2-.5-.4-.1-.2-.2-.4-.3-.6-.1-.2-.1-.4-.2-.5 0-.1-.1-.2-.2-.3-.1-.1-.2-.2-.3-.3-.1-.1-.2-.2-.3-.3-.1-.1-.2-.2-.1-.3.1-.1.2-.3.3-.4.1-.1.2-.2.3-.3.1-.1.1-.2.1-.3s0-.2-.1-.3c-.1-.1-.2-.3-.3-.4-.1-.1-.2-.2-.4-.2H6.8c-.2 0-.4 0-.5.1-.1 0-.2.1-.3.2-.1.2-.3.3-.3.3-.1.2-.2.4-.2.6 0 .2 0 .4.1.6.1.2.2.4.3.6.1.2.3.4.5.6.2.2.4.4.7.6.3.2.6.4 1 .5.3.1.7.2 1.1.2h.3c.2 0 .4-.1.6-.2.2-.1.3-.2.4-.4.1-.2.1-.4.1-.6 0-.2-.1-.3-.2-.4z"/>
-            </svg>
-            Suporte
-        </button>
-
-        <button onclick="window.open('https://app.bancabrasileira.com.br/pr/UBmDxM8X', '_blank')">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 14.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13zM8 4a1 1 0 0 0-1 1v3.6l-2.3-2.3a1 1 0 0 0-1.4 1.4l3 3a1 1 0 0 0 1.4 0l3-3a1 1 0 0 0-1.4-1.4L9 8.6V5a1 1 0 0 0-1-1z"/>
-            </svg>
-            Cassino
-        </button>
-
-        <button onclick="mostrar('jogar')">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 14.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13zM6 5l4 3-4 3V5z"/>
-            </svg>
-            Jogar
-        </button>
-
-        <button onclick="mostrar('palpites')">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 14.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13zM8 4a1 1 0 0 0-1 1v5a1 1 0 0 0 2 0V5a1 1 0 0 0-1-1z"/>
-            </svg>
-            Palpites
-        </button>
-
-        <button onclick="window.open('https://info.bancabrasileirabet.com.br', '_blank')">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 14.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13zM8 11.5a.75.75 0 0 1-.75.75h-.5a.75.75 0 0 1 0-1.5h.5a.75.75 0 0 1 .75.75zm0-2a.75.75 0 0 1-.75.75h-.5a.75.75 0 0 1 0-1.5h.5a.75.75 0 0 1 .75.75zm.75-3.25a.75.75 0 0 1-1.5 0 .25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5a1.75 1.75 0 0 1 1.75 1.75z"/>
-            </svg>
-            Saiba Mais
-        </button>
-    </footer>
-
-    <script>
-        // Mostrar o overlay do promotor após 15 segundos
-        setTimeout(() => {
-            document.getElementById('promotorOverlay').style.display = 'flex';
-        }, 15000);
-
-        try {
-            const animals = [
-                { name: 'Avestruz', emoji: '🦢', group: 1, tens: ['01', '02', '03', '04'] },
-                { name: 'Águia', emoji: '🦅', group: 2, tens: ['05', '06', '07', '08'] },
-                { name: 'Burro', emoji: '🫏', group: 3, tens: ['09', '10', '11', '12'] },
-                { name: 'Borboleta', emoji: '🦋', group: 4, tens: ['13', '14', '15', '16'] },
-                { name: 'Cachorro', emoji: '🐶', group: 5, tens: ['17', '18', '19', '20'] },
-                { name: 'Cabra', emoji: '🐐', group: 6, tens: ['21', '22', '23', '24'] },
-                { name: 'Carneiro', emoji: '🐏', group: 7, tens: ['25', '26', '27', '28'] },
-                { name: 'Camelo', emoji: '🐪', group: 8, tens: ['29', '30', '31', '32'] },
-                { name: 'Cobra', emoji: '🐍', group: 9, tens: ['33', '34', '35', '36'] },
-                { name: 'Coelho', emoji: '🐰', group: 10, tens: ['37', '38', '39', '40'] },
-                { name: 'Cavalo', emoji: '🐎', group: 11, tens: ['41', '42', '43', '44'] },
-                { name: 'Elefante', emoji: '🐘', group: 12, tens: ['45', '46', '47', '48'] },
-                { name: 'Galo', emoji: '🐓', group: 13, tens: ['49', '50', '51', '52'] },
-                { name: 'Gato', emoji: '🐱', group: 14, tens: ['53', '54', '55', '56'] },
-                { name: 'Jacaré', emoji: '🐊', group: 15, tens: ['57', '58', '59', '60'] },
-                { name: 'Leão', emoji: '🦁', group: 16, tens: ['61', '62', '63', '64'] },
-                { name: 'Macaco', emoji: '🐒', group: 17, tens: ['65', '66', '67', '68'] },
-                { name: 'Porco', emoji: '🐷', group: 18, tens: ['69', '70', '71', '72'] },
-                { name: 'Pavão', emoji: '🦚', group: 19, tens: ['73', '74', '75', '76'] },
-                { name: 'Peru', emoji: '🦃', group: 20, tens: ['77', '78', '79', '80'] },
-                { name: 'Touro', emoji: '🐂', group: 21, tens: ['81', '82', '83', '84'] },
-                { name: 'Tigre', emoji: '🐅', group: 22, tens: ['85', '86', '87', '88'] },
-                { name: 'Urso', emoji: '🐻', group: 23, tens: ['89', '90', '91', '92'] },
-                { name: 'Veado', emoji: '🦌', group: 24, tens: ['93', '94', '95', '96'] },
-                { name: 'Vaca', emoji: '🐄', group: 25, tens: ['97', '98', '99', '00'] }
-            ];
-
-            const bancas = {
-                'PT Rio': { schedules: { 'Domingo': ['09:30', '11:30', '14:30', '16:30'], 'Segunda': ['09:30', '11:30', '14:30', '16:30', '18:30', '21:30'], 'Terça': ['09:30', '11:30', '14:30', '16:30', '18:30', '21:30'], 'Quarta': ['09:30', '11:30', '14:30', '16:30', '19:00', '21:30'], 'Quinta': ['09:30', '11:30', '14:30', '16:30', '18:30', '21:30'], 'Sexta': ['09:30', '11:30', '14:30', '16:30', '18:30', '21:30'], 'Sábado': ['09:30', '11:30', '14:30', '16:30', '19:00', '21:30'] }},
-                'Look GO': { schedules: { 'Domingo': ['09:00', '11:00', '14:00', '16:00', '18:00', '21:00'], 'Segunda': ['09:00', '11:00', '14:00', '16:00', '18:00', '21:00'], 'Terça': ['09:00', '11:00', '14:00', '16:00', '18:00', '21:00'], 'Quarta': ['09:00', '11:00', '14:00', '16:00', '18:00', '19:00', '21:00'], 'Quinta': ['09:00', '11:00', '14:00', '16:00', '18:00', '21:00'], 'Sexta': ['09:00', '11:00', '14:00', '16:00', '18:00', '21:00'], 'Sábado': ['09:00', '11:00', '14:00', '16:00', '18:00', '19:00', '21:00'] }},
-                'Nacional': { schedules: { 'Domingo': ['02:00', '08:00', '10:00', '12:00', '15:00', '17:00', '20:00', '23:00'], 'Segunda': ['02:00', '08:00', '10:00', '12:00', '15:00', '17:00', '20:00', '23:00'], 'Terça': ['02:00', '08:00', '10:00', '12:00', '15:00', '17:00', '20:00', '23:00'], 'Quarta': ['02:00', '08:00', '10:00', '12:00', '15:00', '17:00', '20:00', '23:00'], 'Quinta': ['02:00', '08:00', '10:00', '12:00', '15:00', '17:00', '20:00', '23:00'], 'Sexta': ['02:00', '08:00', '10:00', '12:00', '15:00', '17:00', '20:00', '23:00'], 'Sábado': ['02:00', '08:00', '10:00', '12:00', '15:00', '17:00', '20:00', '23:00'] }},
-                'Maluca BA': { schedules: { 'Domingo': ['10:00', '12:00', '15:00'], 'Segunda': ['10:00', '12:00', '15:00', '19:00', '21:00'], 'Terça': ['10:00', '12:00', '15:00', '19:00', '21:00'], 'Quarta': ['10:00', '12:00', '15:00', '19:00', '21:00'], 'Quinta': ['10:00', '12:00', '15:00', '19:00', '21:00'], 'Sexta': ['10:00', '12:00', '15:00', '19:00', '21:00'], 'Sábado': ['10:00', '12:00', '15:00', '19:00', '21:00'] }},
-                'Lotep': { schedules: { 'Domingo': ['10:45', '12:45'], 'Segunda': ['10:45', '12:45', '15:45', '18:00'], 'Terça': ['10:45', '12:45', '15:45', '18:00'], 'Quarta': ['10:45', '12:45', '15:45', '18:00', '19:00'], 'Quinta': ['10:45', '12:45', '15:45', '18:00'], 'Sexta': ['10:45', '12:45', '15:45', '18:00'], 'Sábado': ['10:45', '12:45', '15:45', '18:00', '19:00'] }}
-            };
-
-            const puxadas = {
-                'Avestruz': ['Pavão', 'Águia', 'Galo'], 'Águia': ['Avestruz', 'Galo', 'Pavão'], 'Burro': ['Cavalo', 'Vaca', 'Touro'], 'Borboleta': ['Gato', 'Cobra', 'Coelho'],
-                'Cachorro': ['Galo', 'Camelo', 'Macaco'], 'Cabra': ['Vaca', 'Carneiro', 'Touro'], 'Carneiro': ['Cabra', 'Vaca', 'Touro'], 'Camelo': ['Cachorro', 'Urso', 'Avestruz'],
-                'Cobra': ['Borboleta', 'Jacaré', 'Gato'], 'Coelho': ['Borboleta', 'Gato', 'Cobra'], 'Cavalo': ['Burro', 'Vaca', 'Carneiro'], 'Elefante': ['Urso', 'Touro', 'Leão'],
-                'Galo': ['Avestruz', 'Águia', 'Pavão'], 'Gato': ['Borboleta', 'Cobra', 'Coelho'], 'Jacaré': ['Cobra', 'Porco', 'Borboleta'], 'Leão': ['Elefante', 'Tigre', 'Urso'],
-                'Macaco': ['Cachorro', 'Gato', 'Leão'], 'Porco': ['Jacaré', 'Vaca', 'Cabra'], 'Pavão': ['Avestruz', 'Galo', 'Águia'], 'Peru': ['Galo', 'Pavão', 'Avestruz'],
-                'Touro': ['Carneiro', 'Vaca', 'Cabra'], 'Tigre': ['Leão', 'Porco', 'Elefante'], 'Urso': ['Camelo', 'Elefante', 'Leão'], 'Veado': ['Coelho', 'Borboleta', 'Gato'],
-                'Vaca': ['Cabra', 'Carneiro', 'Touro']
-            };
-
-            function mostrar(id) {
-                const jogar = document.getElementById('jogar');
-                const palpitesContainer = document.getElementById('palpites-container');
-                const palpites = document.getElementById('palpites');
-
-                jogar.style.display = id === 'jogar' ? 'block' : 'none';
-                palpitesContainer.style.display = id === 'palpites' ? 'block' : 'none';
-                palpites.classList.toggle('visible', id === 'palpites');
-
-                if (id === 'palpites') {
-                    document.getElementById('palpiteOutput').innerHTML = '';
-                    populateAnimalSelect();
-                    handlePuxada();
-                }
-            }
-
-            function generateMilhar() {
-                return Math.floor(Math.random() * 10000).toString().padStart(4, '0');
-            }
-
-            function getAnimalByMilhar(milhar) {
-                const tens = milhar.slice(-2);
-                return animals.find(animal => animal.tens.includes(tens)) || animals[0];
-            }
-
-            function getNextDrawTime(banca, now) {
-                if (!bancas[banca]) return null;
-                const days = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
-                const today = days[now.getDay()];
-                const schedules = bancas[banca].schedules[today];
-                if (!schedules) return null;
-                const nowTime = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
-                let nextTime = schedules.find(time => time > nowTime);
-                if (!nextTime) nextTime = schedules[0];
-                return { time: nextTime };
-            }
-
-            function generatePalpites(banca, drawTime) {
-                const key = `palpites_${banca}_${drawTime}`;
-                const stored = localStorage.getItem(key);
-                if (stored) return JSON.parse(stored);
-
-                const palpites = [];
-                for (let i = 0; i < 10; i++) {
-                    const milhar = generateMilhar();
-                    const animal = getAnimalByMilhar(milhar);
-                    palpites.push({ milhar, animal: `${animal.emoji} ${animal.name}` });
-                }
-                localStorage.setItem(key, JSON.stringify(palpites));
-                return palpites;
-            }
-
-            function shareOnWhatsApp(banca, drawTime, palpites) {
-                const message = `Palpites para ${banca} - ${drawTime}:\n${palpites.map(p => `${p.milhar} - ${p.animal}`).join('\n')}\n\nACESSE: https://bancabrasileirabet.com.br/`;
-                window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`, '_blank');
-            }
-
-            function displayPalpites() {
-                const bancaSelect = document.getElementById('bancaSelect');
-                const palpiteOutput = document.getElementById('palpiteOutput');
-                const selectedBanca = bancaSelect.value;
-
-                if (!selectedBanca) {
-                    palpiteOutput.innerHTML = '<p class="error">Selecione uma banca.</p>';
-                    return;
-                }
-
-                palpiteOutput.innerHTML = '<p class="loading">Carregando palpites...</p>';
-                const now = new Date();
-                const nextDraw = getNextDrawTime(selectedBanca, now);
-                if (!nextDraw) {
-                    palpiteOutput.innerHTML = '<p class="error">Nenhum horário disponível.</p>';
-                    return;
-                }
-
-                const palpites = generatePalpites(selectedBanca, nextDraw.time);
-                palpiteOutput.innerHTML = `
-                    <div>
-                        <h3>${selectedBanca} - ${nextDraw.time}</h3>
-                        <ul class="list-disc pl-5">
-                            ${palpites.map(p => `<li class="milhares">${p.milhar} - ${p.animal}</li>`).join('')}
-                        </ul>
-                        <button id="shareWhatsApp" class="mt-4 green">Compartilhar no WhatsApp</button>
-                    </div>
-                `;
-                document.getElementById('shareWhatsApp').addEventListener('click', () => shareOnWhatsApp(selectedBanca, nextDraw.time, palpites));
-            }
-
-            function populateAnimalSelect() {
-                const select = document.getElementById('animalSelect');
-                select.innerHTML = '<option value="">Selecione um animal</option>';
-                animals.forEach(animal => {
-                    const option = document.createElement('option');
-                    option.value = animal.name;
-                    option.textContent = `${animal.emoji} ${animal.name}`;
-                    select.appendChild(option);
-                });
-            }
-
-            function handlePuxada() {
-                const select = document.getElementById('animalSelect');
-                const verPuxada = document.getElementById('verPuxada');
-                const puxadaResult = document.getElementById('puxadaResult');
-
-                select.addEventListener('change', () => {
-                    verPuxada.classList.toggle('hidden', !select.value);
-                    puxadaResult.innerHTML = '';
-                });
-
-                verPuxada.addEventListener('click', () => {
-                    const animal = select.value;
-                    if (!animal) return;
-                    const pulls = puxadas[animal] || [];
-                    puxadaResult.innerHTML = `
-                        <div>
-                            <h3>Puxadas para ${animal}</h3>
-                            <ul class="list-disc pl-5 mt-2">
-                                ${pulls.length ? pulls.map(pull => `<li>${animals.find(a => a.name === pull)?.emoji || ''} ${pull}</li>`).join('') : '<li>Nenhuma puxada disponível.</li>'}
-                            </ul>
-                        </div>
-                    `;
-                });
-            }
-
-            document.addEventListener('DOMContentLoaded', () => {
-                const bancaSelect = document.getElementById('bancaSelect');
-                const gerarPalpitesBtn = document.getElementById('gerarPalpites');
-
-                bancaSelect.addEventListener('change', () => {
-                    gerarPalpitesBtn.disabled = !bancaSelect.value;
-                });
-
-                gerarPalpitesBtn.addEventListener('click', displayPalpites);
-
-                mostrar('jogar');
-            });
-
-        } catch (e) {
-            console.error('Erro:', e);
-        }
-    </script>
 </body>
 </html>
