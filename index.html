@@ -5,9 +5,6 @@
 
     <title>Banca Brasileira</title>
 
-    <meta name="description" content="Banca Brasileira é uma plataforma completa de apostas e cassino online. Acesse o app oficial com segurança, rapidez e suporte via WhatsApp.">
-    <meta name="keywords" content="banca brasileira, banca brasileira bet, cassino online, apostas online, jogos online">
-    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" type="image/webp" href="icon.webp">
@@ -31,24 +28,26 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 12px;
-            padding: 0 10px;
+            gap: 10px;
+            padding: 0 8px;
+            flex-wrap: wrap;
         }
 
         .footer-btn {
             background: #1a1a1a;
             border: 1px solid #2a2a2a;
             border-radius: 8px;
-            padding: 8px 12px;
+            padding: 6px 10px;
             color: #fff;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 13px;
+            gap: 6px;
+            font-size: 12px;
             font-weight: 600;
             transition: all 0.2s ease;
             white-space: nowrap;
+            cursor: pointer;
         }
 
         .footer-btn:hover {
@@ -57,7 +56,7 @@
         }
 
         .footer-btn img {
-            height: 28px;
+            height: 20px;
         }
 
         /* Popup */
@@ -72,20 +71,19 @@
         }
 
         .popup {
-            position: relative;
+            background: #111;
+            padding: 25px;
+            border-radius: 10px;
             text-align: center;
-        }
-
-        .popup img {
-            max-width: 90vw;
-            max-height: 70vh;
-            cursor: pointer;
+            color: #fff;
+            max-width: 90%;
+            position: relative;
         }
 
         .close-btn {
             position: absolute;
-            top: -12px;
-            right: -12px;
+            top: 10px;
+            right: 15px;
             background: red;
             color: white;
             width: 28px;
@@ -99,9 +97,9 @@
         }
 
         .access-btn {
-            margin-top: 12px;
-            padding: 10px 22px;
-            font-size: 16px;
+            margin-top: 15px;
+            padding: 12px 22px;
+            font-size: 15px;
             font-weight: bold;
             background: #00ff88;
             color: #000;
@@ -120,12 +118,12 @@
 
 <iframe
     src="https://app.bancabrasileira.com.br/pr/UBmDxM8X"
-    allow="clipboard-read; clipboard-write; fullscreen; payment; geolocation; microphone; camera"
+    allow="clipboard-read; clipboard-write; fullscreen"
     sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-downloads allow-top-navigation">
 </iframe>
 
 <footer>
-    <a class="footer-btn" href="https://wa.me/5583993370071?text=Suporte,%20preciso%20de%20ajuda%20na%20banca%20brasileira!" target="_blank">
+    <a class="footer-btn" href="https://wa.me/5583993370071?text=Suporte,%20preciso%20de%20ajuda!" target="_blank">
         📱 Suporte
     </a>
 
@@ -134,24 +132,28 @@
     </a>
 
     <a class="footer-btn" href="https://tigerclub.com.br" target="_blank">
-        <img src="tiger.webp" alt="Tiger Club">
-        <span>Banca Parceira</span>
+        🐯 Tiger Club
     </a>
+
+    <a class="footer-btn" href="https://app.sorteclub.com/pr/uLjK7Sh8" target="_blank">
+        🍀 Sorte Club
+    </a>
+
+    <div class="footer-btn" onclick="openPopup()">
+        💼 Promotoria
+    </div>
 </footer>
 
-<!-- Popup -->
+<!-- Popup Promotoria -->
 <div class="popup-overlay" id="popup">
     <div class="popup">
         <div class="close-btn" onclick="closePopup()">X</div>
 
-        <a href="https://app.sorteclub.com/pr/uLjK7Sh8" target="_blank">
-            <img src="bancaparceira.webp" alt="Acessar App">
-        </a>
+        <h2>Venha trabalhar com a gente!</h2>
+        <p>Clique abaixo e se torne um promotor agora mesmo.</p>
 
-        <br>
-
-        <a href="https://app.sorteclub.com/pr/Wqz0l6Qw" target="_blank">
-            <button class="access-btn">ACESSAR APP</button>
+        <a href="https://wa.me/5583993370071?text=Eu%20quero%20me%20tornar%20promotor!" target="_blank">
+            <button class="access-btn">Afiliar-se</button>
         </a>
     </div>
 </div>
@@ -163,6 +165,10 @@
 
     function closePopup() {
         document.getElementById("popup").style.display = "none";
+    }
+
+    function openPopup() {
+        document.getElementById("popup").style.display = "flex";
     }
 </script>
 
