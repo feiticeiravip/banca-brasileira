@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://bancabrasileirabet.com.br/sitemap.xml
