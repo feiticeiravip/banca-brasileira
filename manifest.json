@@ -1,21 +1,22 @@
 {
-  "name": "Banca Brasileira",
-  "short_name": "Brasileira",
-  "start_url": "https://app.bancabrasileira.com.br/pr/UBmDxM8X",
+  "name": "manifest.json",
+  "short_name": "Banca Brasileira",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#080808",
+  "theme_color": "#00ff88",
   "orientation": "portrait",
+  "description": "Cassino online, slots, bônus exclusivos e apostas online.",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
+      "src": "icon.webp",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/webp"
     },
     {
-      "src": "/icons/icon-512.png",
+      "src": "icon.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp"
     }
   ]
 }
