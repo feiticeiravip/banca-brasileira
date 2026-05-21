@@ -1,0 +1,299 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#080808;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* =========================
+   TOPO SEO
+========================= */
+
+.topo-seo{
+    padding:25px 20px;
+    text-align:center;
+    background:
+    linear-gradient(
+    180deg,
+    #111 0%,
+    #0b0b0b 100%
+    );
+    border-bottom:1px solid #1f1f1f;
+}
+
+.topo-seo h1{
+    font-size:32px;
+    font-weight:900;
+    margin-bottom:12px;
+    color:#00ff88;
+    text-shadow:0 0 20px rgba(0,255,136,0.35);
+}
+
+.topo-seo p{
+    max-width:850px;
+    margin:auto;
+    font-size:15px;
+    line-height:1.7;
+    color:#d1d1d1;
+}
+
+/* =========================
+   IFRAME
+========================= */
+
+.cassino-container{
+    position:relative;
+    width:100%;
+    height:100dvh;
+    overflow:hidden;
+}
+
+.cassino-frame{
+    width:100%;
+    height:100%;
+    border:none;
+    display:block;
+    background:#000;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    min-height:72px;
+    background:
+    linear-gradient(
+    180deg,
+    #101010,
+    #080808
+    );
+    border-top:1px solid #1f1f1f;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    padding:10px;
+    z-index:999;
+    flex-wrap:wrap;
+    backdrop-filter:blur(10px);
+}
+
+.footer-btn{
+    background:#161616;
+    border:1px solid #2a2a2a;
+    border-radius:12px;
+    padding:10px 14px;
+    color:#fff;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-size:13px;
+    font-weight:700;
+    transition:.25s;
+    white-space:nowrap;
+    cursor:pointer;
+    min-width:110px;
+}
+
+.footer-btn:hover{
+    background:#00ff88;
+    color:#000;
+    transform:translateY(-2px);
+    box-shadow:
+    0 0 20px rgba(0,255,136,.35);
+}
+
+/* =========================
+   POPUP
+========================= */
+
+.popup-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.82);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+    padding:20px;
+    backdrop-filter:blur(6px);
+}
+
+.popup{
+    position:relative;
+    width:100%;
+    max-width:420px;
+    background:
+    linear-gradient(
+    180deg,
+    #151515,
+    #0c0c0c
+    );
+    border:1px solid #2c2c2c;
+    border-radius:24px;
+    overflow:hidden;
+    text-align:center;
+    animation:popupShow .3s ease;
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.6);
+}
+
+.popup img{
+    width:100%;
+    display:block;
+}
+
+.popup-content{
+    padding:24px;
+}
+
+.popup h2{
+    font-size:28px;
+    margin-bottom:10px;
+    color:#00ff88;
+}
+
+.popup p{
+    color:#d7d7d7;
+    line-height:1.6;
+    margin-bottom:22px;
+    font-size:15px;
+}
+
+.close-btn{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.75);
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    z-index:10;
+    transition:.2s;
+}
+
+.close-btn:hover{
+    transform:scale(1.1);
+    background:#ff2b2b;
+}
+
+.access-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:
+    linear-gradient(
+    135deg,
+    #00ff88,
+    #00cc6e
+    );
+    color:#000;
+    font-size:18px;
+    font-weight:900;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.access-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:
+    0 0 30px rgba(0,255,136,.4);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00ff88;
+    border-radius:20px;
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes popupShow{
+
+    from{
+        opacity:0;
+        transform:scale(.9);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:768px){
+
+    .topo-seo h1{
+        font-size:26px;
+    }
+
+    .topo-seo p{
+        font-size:14px;
+    }
+
+    footer{
+        gap:8px;
+        padding:8px;
+    }
+
+    .footer-btn{
+        min-width:95px;
+        font-size:12px;
+        padding:9px 10px;
+    }
+
+    .popup h2{
+        font-size:24px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    footer{
+        justify-content:space-between;
+    }
+
+    .footer-btn{
+        flex:1;
+        min-width:48%;
+    }
+
+}
