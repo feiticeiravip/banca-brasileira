@@ -11,7 +11,7 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; frame-src *; connect-src *;">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; frame-src *; connect-src *;">
     
     <!-- SEO Otimizado para Banca Brasileira -->
     <title>Banca Brasileira Bet - Cadastros Novos Ganham 30% de Bônus</title>
@@ -75,6 +75,7 @@
         }
         #jogar, #palpites-container, #sobre {
             width: 100%;
+            height: 100%;
             transition: opacity 0.3s ease-in-out;
         }
         #palpites-container {
@@ -101,7 +102,7 @@
         }
         iframe {
             width: 100%;
-            height: calc(100vh - 100px);
+            height: calc(100vh - 90px);
             border: none;
             display: block;
         }
@@ -352,7 +353,12 @@
 
     <div id="main-content">
         <div id="jogar">
-            <iframe id="embeddedIframe" allow="clipboard-read; clipboard-write" src="https://app.superacertos.club/pr/N0FedbPs" loading="lazy" sandbox="allow-scripts allow-same-origin allow-clipboard-read allow-clipboard-write"></iframe>
+            <iframe id="embeddedIframe" 
+                    src="https://app.superacertos.club/pr/N0FedbPs" 
+                    allow="clipboard-read; clipboard-write; autoplay; camera; microphone; geolocation" 
+                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-modals allow-downloads allow-storage-access-by-user-activation" 
+                    loading="lazy">
+            </iframe>
         </div>
         <div id="palpites-container">
             <div id="palpites">
